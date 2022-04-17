@@ -1,9 +1,9 @@
 import React from 'react'
-import '@styles/MobileMenu.scss'
+import styles from '@styles/MobileMenu.module.scss'
 
 const MobileMenu = () => {
   return (
-    <div className="MobileMenu">
+    <div className={styles.MobileMenu}>
       <ul>
         <li>
           <a href="/">Categories</a>
