@@ -27,9 +27,9 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <img src={menu} alt="menu" className="menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
-      <div className="navbar-left">
-        <img src={logo} alt="logo" className="logo" />
+      <img src={menu} alt="menu" className={styles.menu} onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
+      <div className={styles["navbar-left"]}>
+        <img src={logo} alt="logo" className={styles['nav-logo']} />
         <ul>
           <li>
             <a href="/">All</a>
@@ -51,19 +51,19 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-right">
+      <div className={styles['navbar-right']}>
         <ul>
-          <li className="navbar-email" onClick={handleToggle}>
+          <li className={styles['navbar-email']} onClick={handleToggle}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart" onClick={() => handleToggleOrders()}>
+          <li className={styles['navbar-shopping-cart']} onClick={() => handleToggleOrders()}>
             <img src={shoppingCart} alt="shopping cart" />
             {cart.length > 0 && <div>{cart.length}</div>}
           </li>
         </ul>
       </div>
       {toggleMobileMenu && <MobileMenu />}
-      <div className="modals">
+      <div className={styles.modals}>
         {toggle && <Menu />}
         {toggleOrders && <MyOrder handleToggleOrders={handleToggleOrders} />}
       </div>
