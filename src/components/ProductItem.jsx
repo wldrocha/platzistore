@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import Image from 'next/image'
 import AppContext from '@context/AppContext'
 import addCart from '@icons/bt_add_to_cart.svg'
 import addedCart from '@icons/bt_added_to_cart.svg'
@@ -20,16 +21,17 @@ const ProductItem = ({ product }) => {
     title,
     images: { 0: image },
   } = product
+
   return (
     <div className={styles.ProductItem}>
-      <img src={image} alt="" />
+      <img src={image} alt={title} width="240px" height="240px"/>
       <div className={styles['product-info']}>
         <div>
           <p>$ {price}</p>
           <p>{title}</p>
         </div>
         <figure onClick={() => handleClick(product)}>
-          <img src={isAdded ? addedCart : addCart} alt="cart icon" />
+          <Image src={isAdded ? addedCart : addCart} alt="cart icon" />
         </figure>
       </div>
     </div>

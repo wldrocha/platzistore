@@ -8,7 +8,17 @@ const OrderItem = product => {
   const { removeFromCart } = useContext(AppContext)
   return (
     <div className={styles.orderItem}>
-      <figure>{product?.images !== undefined && <Image src={product?.images[0]} alt={product?.title} />}</figure>
+      <figure>
+        <Image
+          src={product?.images[0]}
+          alt={product?.title}
+          title={product?.title}
+          width="100%"
+          height="100%"
+          // layout="responsive"
+          // objectFit="contain"
+        />
+      </figure>
       <p>{product?.title}</p>
       <p>${product?.price}</p>
       <Image src={close} alt="close" onClick={() => removeFromCart(id)} />
