@@ -5,15 +5,14 @@
   justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid $--very-light-pink;
-  position: fixed;
+  position: sticky;
   top: 0;
-  background: white;
-  width: calc(100% - 50px);
+  background-color: $--white;
 }
 .menu {
   display: none;
 }
-.nav-logo {
+.logo {
   width: 100px;
 }
 .navbar-left ul,
@@ -48,9 +47,11 @@
   color: $--very-light-pink;
   font-size: $--sm;
   margin-right: 12px;
+  cursor: pointer;
 }
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 .navbar-shopping-cart div {
   width: 16px;
@@ -65,6 +66,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modals {
+  position: absolute;
+  top: 4rem;
+  right: 4px;
+  display: flex;
 }
 @media (max-width: 640px) {
   .menu {

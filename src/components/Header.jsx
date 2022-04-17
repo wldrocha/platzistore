@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import Image from 'next/image'
 import Menu from '@components/Menu'
 import MobileMenu from '@components/MobileMenu'
 import MyOrder from '@containers/MyOrder'
@@ -27,9 +28,9 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <img src={menu} alt="menu" className={styles.menu} onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
-      <div className={styles["navbar-left"]}>
-        <img src={logo} alt="logo" className={styles['nav-logo']} />
+      <Image src={menu} alt="menu" className={styles.menu} onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
+      <div className={styles['navbar-left']}>
+        <Image src={logo} alt="logo" className={styles['nav-logo']} />
         <ul>
           <li>
             <a href="/">All</a>
@@ -57,7 +58,7 @@ const Header = () => {
             platzi@example.com
           </li>
           <li className={styles['navbar-shopping-cart']} onClick={() => handleToggleOrders()}>
-            <img src={shoppingCart} alt="shopping cart" />
+            <Image src={shoppingCart} alt="shopping cart" />
             {cart.length > 0 && <div>{cart.length}</div>}
           </li>
         </ul>
