@@ -4,16 +4,17 @@ module.exports = {
     browser: true,
     amd: true,
     node: true,
-    es6: true
+    es6: true,
   },
   extends: [
     'eslint:recommended',
-    'plugin: jsx-a11y/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:prettier/recomended',
     'next',
-    'next/core-web-details'
+    'next/core-web-details',
   ],
   rules: {
-    "semi":['error', 'never'],
-  }
+    semi: ['error', 'never'],
+    'prettier/prettier': 0,
+  },
 }

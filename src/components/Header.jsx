@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <Image src={menu} alt="menu" className={styles.menu} onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
+      <img src={menu.src  } alt="menu hola" className={styles.menu} onClick={() => setToggleMobileMenu(!toggleMobileMenu)} />
       <div className={styles['navbar-left']}>
         <Link href="/">
           <Image src={logo} alt="logo" className={styles.logo} />

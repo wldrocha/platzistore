@@ -8,6 +8,5 @@ module.exports = {
   jsxBracketSameLine: true,
   trailingComma: "es5",
   bracketSpacing: true,
-  arrowParens: "avoid",
   semicolons: true,
 }
