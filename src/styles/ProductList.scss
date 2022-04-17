@@ -1,8 +1,8 @@
-@import 'vars';
+@use 'vars';
 
 .ProductList {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, 240px);
+	grid-template-columns: repeat(auto-fill, 240px
 	gap: 26px;
 	place-content: center;
 	margin: 3em 0 0 0;
@@ -10,6 +10,6 @@
 
 @media (max-width: 640px) {
 	.ProductList {
-		grid-template-columns: repeat(auto-fill, 140px);
+		grid-template-columns: repeat(auto-fill, 140px
 	}
 }

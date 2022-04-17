@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import OrderItem from '@components/OrderItem'
 import AppContext from '@context/AppContext'
-import '@styles/MyOrder.scss'
+import styles from '@styles/MyOrder.module.scss'
 
 import arrow from '@icons/flechita.svg'
 
@@ -15,7 +15,7 @@ const MyOrder = ({ handleToggleOrders }) => {
   }
 
   return (
-    <aside className="MyOrder">
+    <aside className={styles.MyOrder}>
       <div className="title-container">
         <img src={arrow} alt="arrow" onClick={() => handleToggleOrders()} />
         <p className="title">My order</p>
