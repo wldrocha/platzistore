@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
-import '@styles/ProductItem.scss'
 import AppContext from '@context/AppContext'
 import addCart from '@icons/bt_add_to_cart.svg'
 import addedCart from '@icons/bt_added_to_cart.svg'
+import styles from '@styles/ProductItem.module.scss'
 
 const ProductItem = ({ product }) => {
   const { addToCart, removeFromCart } = useContext(AppContext)
@@ -21,9 +21,9 @@ const ProductItem = ({ product }) => {
     images: { 0: image },
   } = product
   return (
-    <div className="ProductItem">
+    <div className={styles.ProductItem}>
       <img src={image} alt="" />
-      <div className="product-info">
+      <div className={styles['product-info']}>
         <div>
           <p>$ {price}</p>
           <p>{title}</p>
